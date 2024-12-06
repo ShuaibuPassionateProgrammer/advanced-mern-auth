@@ -8,7 +8,16 @@ const logout = async (req, res) => {
     // logic goes here
 };
 const signup = async (req, res) => {
-    // logic goes here
+    try {
+        const { name, email, password } = req.body;
+
+        if(!name || !email || !password) {
+            throw new Error("All fields are required");
+        }
+    }
+    catch (error) {
+        res.status(500).json({ success: false, message: error?.message });
+    }
 };
 const verifyEmail = async (req, res) => {
     // logic goes here
