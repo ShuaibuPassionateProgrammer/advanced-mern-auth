@@ -1,5 +1,6 @@
 import bcryptjs from "bcryptjs";
 import crypto from "crypto";
+import { User } from "../models/user.model.js";
 
 const login = async (req, res) => {
     // logic goes here
@@ -14,6 +15,9 @@ const signup = async (req, res) => {
         if(!name || !email || !password) {
             throw new Error("All fields are required");
         }
+
+        const userAlreadyExists = await User.findOne({ email });
+        console.log("Existing User: ", userAlreadyExists);
     }
     catch (error) {
         res.status(500).json({ success: false, message: error?.message });
