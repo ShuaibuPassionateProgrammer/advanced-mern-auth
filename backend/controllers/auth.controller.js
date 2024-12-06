@@ -49,11 +49,11 @@ const signup = async (req, res) => {
 				password: undefined,
 			},
 		});
-    }
-    catch (error) {
-        res.status(500).json({ success: false, message: error?.message });
-    }
+    } catch (error) {
+		res.status(400).json({ success: false, message: error.message });
+	}
 };
+
 const verifyEmail = async (req, res) => {
     // logic goes here
 };
