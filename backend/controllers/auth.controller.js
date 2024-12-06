@@ -35,6 +35,12 @@ const signup = async (req, res) => {
 		});
 
         await user.save();
+
+        // jwt
+		generateTokenAndSetCookie(res, user._id);
+
+        await sendVerificationEmail(user.email, verificationToken);
+
     }
     catch (error) {
         res.status(500).json({ success: false, message: error?.message });
