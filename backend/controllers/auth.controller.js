@@ -23,7 +23,8 @@ const signup = async (req, res) => {
             return res.status(400).json({ success: false, message: "User already exists" });
         }
 
-        
+        const hashedPassword = await bcryptjs.hash(password, 10);
+		const verificationToken = Math.floor(100000 + Math.random() * 900000).toString();
     }
     catch (error) {
         res.status(500).json({ success: false, message: error?.message });
