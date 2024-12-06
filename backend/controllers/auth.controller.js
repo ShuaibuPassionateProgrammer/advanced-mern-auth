@@ -8,25 +8,26 @@ const login = async (req, res) => {
 const logout = async (req, res) => {
     // logic goes here
 };
-const signup = async (req, res) => {
+
+export const signup = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { email, password, name } = req.body;
+		
+        if (!email || !password || !name) {
+			throw new Error("All fields are required");
+		}
 
-        if(!name || !email || !password) {
-            throw new Error("All fields are required");
-        }
+		const userAlreadyExists = await User.findOne({ email });
+		console.log("userAlreadyExists", userAlreadyExists);
 
-        const userAlreadyExists = await User.findOne({ email });
-        console.log("Existing User: ", userAlreadyExists);
+		if (userAlreadyExists) {
+			return res.status(400).json({ success: false, message: "User already exists" });
+		}
 
-        if(userAlreadyExists) {
-            return res.status(400).json({ success: false, message: "User already exists" });
-        }
-
-        const hashedPassword = await bcryptjs.hash(password, 10);
+		const hashedPassword = await bcryptjs.hash(password, 10);
 		const verificationToken = Math.floor(100000 + Math.random() * 900000).toString();
 
-        const user = new User({
+		const user = new User({
 			email,
 			password: hashedPassword,
 			name,
@@ -34,14 +35,14 @@ const signup = async (req, res) => {
 			verificationTokenExpiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
 		});
 
-        await user.save();
+		await user.save();
 
-        // jwt
+		// jwt
 		generateTokenAndSetCookie(res, user._id);
 
-        await sendVerificationEmail(user.email, verificationToken);
+		await sendVerificationEmail(user.email, verificationToken);
 
-        res.status(201).json({
+		res.status(201).json({
 			success: true,
 			message: "User created successfully",
 			user: {
@@ -49,8 +50,8 @@ const signup = async (req, res) => {
 				password: undefined,
 			},
 		});
-    } catch (error) {
-		res.status(400).json({ success: false, message: error.message });
+	} catch (error) {
+		res.status(500).json({ success: false, message: error?.message });
 	}
 };
 
