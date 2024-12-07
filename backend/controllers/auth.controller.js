@@ -5,6 +5,7 @@ import { User } from "../models/user.model.js";
 const login = async (req, res) => {
     // logic goes here
 };
+
 const logout = async (req, res) => {
     // logic goes here
 };
@@ -58,12 +59,14 @@ export const signup = async (req, res) => {
 const verifyEmail = async (req, res) => {
     // logic goes here
 };
+
 const forgotPassword = async (req, res) => {
     // logic goes here
 };
 const resetPassword = async (req, res) => {
     // logic goes here
 };
+
 const checkAuth = async (req, res) => {
     // logic goes here
 };
