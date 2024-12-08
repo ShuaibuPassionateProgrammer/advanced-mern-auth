@@ -3,8 +3,9 @@ import crypto from "crypto";
 import { User } from "../models/user.model.js";
 
 const login = async (req, res) => {
-	const { email, password } = req.body;
 	try {
+		const { email, password } = req.body;
+		
 		const user = await User.findOne({ email });
 		if (!user) {
 			return res.status(400).json({ success: false, message: "Invalid credentials" });
@@ -29,7 +30,7 @@ const login = async (req, res) => {
 		});
 	} catch (error) {
 		console.log("Error in login ", error);
-		res.status(400).json({ success: false, message: error?.message });
+		res.status(500).json({ success: false, message: error?.message });
 	}
 };
 
