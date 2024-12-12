@@ -132,7 +132,7 @@ const resetPassword = async (req, res) => {
 		}
 
 		// update password
-		const hashedPassword = await bcryptjs.hash(password, 10);
+		const hashedPassword = await bcrypt.hash(password, 10);
 
 		user.password = hashedPassword;
 		user.resetPasswordToken = undefined;
