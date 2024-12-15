@@ -88,7 +88,7 @@ const signup = async (req, res) => {
 const verifyEmail = async (req, res) => {
 	try {
 		const { code } = req.body;
-		
+
 		const user = await User.findOne({
 			verificationToken: code,
 			verificationTokenExpiresAt: { $gt: Date.now() },
@@ -179,7 +179,17 @@ const resetPassword = async (req, res) => {
 };
 
 const checkAuth = async (req, res) => {
-    // logic goes here
+	try {
+		const user = await User.findById(req.userId).select("-password");
+		if (!user) {
+			return res.status(400).json({ success: false, message: "User not found" });
+		}
+
+		res.status(200).json({ success: true, user });
+	} catch (error) {
+		console.log("Error in checkAuth ", error);
+		res.status(400).json({ success: false, message: error.message });
+	}
 };
 
 export {
