@@ -4,16 +4,16 @@ import User from '../models/userModel.js';
 export const test = (req, res) => {
     res.json({
         message: 'User Route',
-    })
-}
+    });
+};
 
 export const updateUser = async(req, res, next) => {
     if(req.user.id !== req.params.id){
-        return res.status(401).json({message: 'You can update only your account'})
+        return res.status(401).json({message: 'You can update only your account'});
     }
     try{
         if (req.body.password){
-            req.body.password = bcryptjs.hashSync(req.body.password, 10)
+            req.body.password = bcryptjs.hashSync(req.body.password, 10);
         }
         const updatedUser = await User.findByIdAndUpdate(
             req.params.id,{
@@ -31,19 +31,19 @@ export const updateUser = async(req, res, next) => {
         res.status(200).json({ ...rest });
 
     }catch(error){
-        return res.status(401).json({message: 'error'})
+        return res.status(401).json({message: 'error'});
     }
-}
+};
 
 
 export const deleteUser = async(req, res, next) => {
     if(req.user.id !== req.params.id){
-        return res.status(401).json({message: 'You can delete only your account'})
+        return res.status(401).json({message: 'You can delete only your account'});
     }
     try{
-        await User.findByIdAndDelete(req.params.id)
-        res.status(200).json({message: 'User Deleted..'})
+        await User.findByIdAndDelete(req.params.id);
+        res.status(200).json({message: 'User Deleted..'});
     }catch(error){
-        res.status(400).json({message: 'Someting went wrong!!'})
+        res.status(400).json({message: 'Someting went wrong!!'});
     }
-}
+};
