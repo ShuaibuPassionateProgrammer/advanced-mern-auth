@@ -45,7 +45,7 @@ export const login = async(req, res, next) => {
     try{
         const validUser = await User.findOne({email : email})
         if(!validUser){
-            return res.status(401).json({message : 'User not found'})
+            return res.status(401).json({message : 'User not found'});
         }
         const validPassword = bcryptjs.compareSync(password, validUser.password)
         if(!validPassword){
@@ -61,7 +61,7 @@ export const login = async(req, res, next) => {
         .status(200).json(rest)
 
     }catch(error){
-        next(error)
+        next(error);
     }
 }
 
@@ -111,6 +111,6 @@ export const google = async (req, res, next) => {
 
 
 export const signOut = (req, res) => {
-    res.clearCookie('access_token').status(200).json('Signout Successful')
+    res.clearCookie('access_token').status(200).json('Signout Successful');
 }
 
