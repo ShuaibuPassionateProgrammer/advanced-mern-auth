@@ -19,8 +19,8 @@
             type : String,
             default : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9bzWbObcb7ZJbbLu63Q5dhSFa36iz1n1YjosbIhkJIg&s'
         },
-    }, {timestamps: true})
+    }, {timestamps: true});
 
-    const User = mongoose.model('User', userSchema)
+    const User = mongoose.model('User', userSchema);
 
-    export default User
+    export default User;
