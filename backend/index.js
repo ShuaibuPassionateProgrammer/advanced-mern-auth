@@ -10,10 +10,6 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 
-app.listen(3000, ()=>{
-    console.log('Server running on port 3000');
-})
-
 app.use('/api/user', userRouter)
 app.use('/api/auth', authRoute)
 
@@ -25,4 +21,8 @@ app.use((err, req, res, next) => { // middleware for error handling
         message,
         statusCode : statusCode
     })
+})
+
+app.listen(3000, ()=>{
+    console.log('Server running on port 3000');
 })
