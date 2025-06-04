@@ -30,4 +30,5 @@ app.use((err, req, res, next) => { // middleware for error handling
 
 app.listen(PORT, ()=>{
     console.log(`Server running at http://127.0.0.1:${PORT}`);
+    connectDB();
 })
