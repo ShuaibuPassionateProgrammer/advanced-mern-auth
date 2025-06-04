@@ -8,6 +8,8 @@ import { connectDB } from "./config/db.js";
 
 const app = express()
 
+dotenv.config();
+
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
