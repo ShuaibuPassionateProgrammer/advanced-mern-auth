@@ -4,6 +4,7 @@ import authRoute from './routes/user.auth.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser';
 import dotenv from "dotenv";
+import { connectDB } from "./config/db.js";
 
 const app = express()
 
