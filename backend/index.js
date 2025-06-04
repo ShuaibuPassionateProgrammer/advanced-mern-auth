@@ -1,5 +1,4 @@
 import express from 'express'
-import mongoose from 'mongoose';
 import userRouter from './routes/user.routes.js'
 import authRoute from './routes/user.auth.js'
 import cors from 'cors'
