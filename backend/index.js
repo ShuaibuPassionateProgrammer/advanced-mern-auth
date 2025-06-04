@@ -3,6 +3,7 @@ import userRouter from './routes/user.routes.js'
 import authRoute from './routes/user.auth.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser';
+import dotenv from "dotenv";
 
 const app = express()
 
