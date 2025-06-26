@@ -57,3 +57,13 @@ advanced-mern-auth/
 │ ├── utils/ # Token generation, helpers
 
 │ └── server.js # Entry point
+
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/advanced-mern-auth.git
+cd advanced-mern-auth
