@@ -61,7 +61,7 @@ advanced-mern-auth/
 
 ---
 
-2. Backend Setup
+### 2. Backend Setup
 ```bash
 Edit
 cd server
@@ -78,7 +78,7 @@ REFRESH_TOKEN_SECRET=your_refresh_token_secret
 
 ```
 
-### 4. Start the backend server:
+## 4. Start the backend server:
 ```bash
 npm run dev
 ```
