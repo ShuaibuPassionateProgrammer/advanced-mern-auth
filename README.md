@@ -132,6 +132,10 @@ Feel free to reach out for collaboration, feedback, or just to say hi!
 
 ---
 
+“Authentication is the gate — make it both strong and seamless.” 🔐
+
+---
+
 ### ✅ Final Notes:
 - Replace placeholders like:
   - `your-username`
