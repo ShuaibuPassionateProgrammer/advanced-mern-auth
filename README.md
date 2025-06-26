@@ -63,11 +63,18 @@ advanced-mern-auth/
 
 2. Backend Setup
 ```bash
-  Copy
   Edit
   cd server
   npm install
   touch .env
+```
+## 3.  Add the following .env file
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+ACCESS_TOKEN_SECRET=your_access_token_secret
+REFRESH_TOKEN_SECRET=your_refresh_token_secret
+
 ```
 
 ---
