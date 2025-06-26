@@ -106,15 +106,13 @@ npm start
 4. Secrets stored in environment variables
 
 📦 Future Improvements
-2FA (Two-Factor Authentication)
-
-OAuth 2.0 Integration (Google, GitHub, etc.)
-
-Account lockout on repeated failed attempts
-
-Admin dashboard
-
-Audit logs and activity tracking
+<ul>
+  <li>2FA (Two-Factor Authentication)</li>
+  <li>OAuth 2.0 Integration (Google, GitHub, etc.)</li>
+  <li>Account lockout on repeated failed attempts</li>
+  <li>Admin dashboard</li>
+  <li>Audit logs and activity tracking</li>
+</ul>
 
 🙌 Contributing
 Contributions, issues, and feature requests are welcome!
