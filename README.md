@@ -63,11 +63,12 @@ advanced-mern-auth/
 
 2. Backend Setup
 ```bash
-  Edit
-  cd server
-  npm install
-  touch .env
+Edit
+cd server
+npm install
+touch .env
 ```
+
 ## 3.  Add the following .env file
 ```bash
 PORT=5000
@@ -77,6 +78,10 @@ REFRESH_TOKEN_SECRET=your_refresh_token_secret
 
 ```
 
+### 4. Start the backend server:
+```bash
+npm run dev
+```
 ---
 
 🔐 Security Practices
