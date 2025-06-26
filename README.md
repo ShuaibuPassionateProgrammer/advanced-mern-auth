@@ -39,12 +39,21 @@ A full-featured, production-ready authentication system built with the MERN stac
 ## 📁 Project Structure
 
 advanced-mern-auth/
+
 ├── client/ # React frontend
+
 ├── server/
+
 │ ├── config/ # DB & environment setup
+
 │ ├── controllers/ # Auth logic
+
 │ ├── middleware/ # Auth & validation middleware
+
 │ ├── models/ # Mongoose models
+
 │ ├── routes/ # API routes
+
 │ ├── utils/ # Token generation, helpers
+
 │ └── server.js # Entry point
