@@ -62,12 +62,13 @@ advanced-mern-auth/
 ---
 
 2. Backend Setup
-  bash
+```bash
   Copy
   Edit
   cd server
   npm install
   touch .env
+```
 
 ---
 
