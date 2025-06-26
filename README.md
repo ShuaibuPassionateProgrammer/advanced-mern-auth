@@ -100,13 +100,10 @@ npm start
 ---
 
 🔐 Security Practices
-Secure HTTP-only cookies for storing refresh tokens (recommended in production)
-
-Rate-limiting & brute-force protection (optional)
-
-Input sanitization and validation
-
-Secrets stored in environment variables
+1. Secure HTTP-only cookies for storing refresh tokens (recommended in production)
+2. Rate-limiting & brute-force protection (optional)
+3. Input sanitization and validation
+4. Secrets stored in environment variables
 
 📦 Future Improvements
 2FA (Two-Factor Authentication)
