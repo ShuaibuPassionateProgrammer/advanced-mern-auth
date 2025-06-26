@@ -124,10 +124,9 @@ This project is licensed under the MIT License.
 💬 Let's Connect
 Feel free to reach out for collaboration, feedback, or just to say hi!
 
-🌐 Portfolio: your-portfolio-link.com
-
-🐦 Twitter: @yourhandle
-
-💼 LinkedIn: Your Name
+<ul>
+  <li>🌐 Portfolio: https://shuaibu.vercel.app</li>
+  <li>🐦 Twitter: @yourhandle</li>
+  <li>💼 LinkedIn: Your Name</li>
 
 
