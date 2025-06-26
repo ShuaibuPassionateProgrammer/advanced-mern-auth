@@ -78,10 +78,18 @@ REFRESH_TOKEN_SECRET=your_refresh_token_secret
 
 ```
 
-## 4. Start the backend server:
+## 4. Start the backend server
 ```bash
 npm run dev
 ```
+
+## 5. Frontend Setup
+```bash
+cd ../client
+npm install
+npm start
+```
+
 ---
 
 🔐 Security Practices
