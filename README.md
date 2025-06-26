@@ -61,6 +61,14 @@ advanced-mern-auth/
 
 ---
 
+## 🔧 Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/advanced-mern-auth.git
+cd advanced-mern-auth
+```
+
 ### 2. Backend Setup
 ```bash
 Edit
@@ -69,21 +77,20 @@ npm install
 touch .env
 ```
 
-## 3.  Add the following .env file
+### 3.  Add the following .env file
 ```bash
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ACCESS_TOKEN_SECRET=your_access_token_secret
 REFRESH_TOKEN_SECRET=your_refresh_token_secret
-
 ```
 
-## 4. Start the backend server
+### 4. Start the backend server
 ```bash
 npm run dev
 ```
 
-## 5. Frontend Setup
+### 5. Frontend Setup
 ```bash
 cd ../client
 npm install
