@@ -68,7 +68,8 @@ advanced-mern-auth/
 git clone https://github.com/your-username/advanced-mern-auth.git
 cd advanced-mern-auth
 
-## 2. Backend Setup
+### 2. Backend Setup
+```bash
 cd server
 npm install
 touch .env
